@@ -45,6 +45,7 @@ var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
 };
 var _this = this;
 // Initialize and add the map
+//@ts-ignore
 (function (g) { var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window; b = b[c] || (b[c] = {}); var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = function () { return h || (h = new Promise(function (f, n) { return __awaiter(_this, void 0, void 0, function () { var _a; return __generator(this, function (_b) {
     switch (_b.label) {
         case 0: return [4 /*yield*/, (a = m.createElement("script"))];
@@ -70,14 +71,13 @@ var _this = this;
 }; })({ key: "AIzaSyBCI9_XT99gdSDgCctcuPFJKCBLi8EPdMM", v: "beta" });
 // Initialize and add the map
 var map;
-function initMap() {
+var position = { lat: 28.482921928694683, lng: -16.322237460149434 };
+function initMap(position) {
     return __awaiter(this, void 0, void 0, function () {
-        var position, Map, AdvancedMarkerView, marker;
+        var Map, AdvancedMarkerView, marker;
         return __generator(this, function (_a) {
             switch (_a.label) {
-                case 0:
-                    position = { lat: 28.482921928694683, lng: -16.322237460149434 };
-                    return [4 /*yield*/, google.maps.importLibrary("maps")];
+                case 0: return [4 /*yield*/, google.maps.importLibrary("maps")];
                 case 1:
                     Map = (_a.sent()).Map;
                     return [4 /*yield*/, google.maps.importLibrary("marker")];
@@ -99,4 +99,10 @@ function initMap() {
         });
     });
 }
-initMap();
+// function initMap(): void {
+//   map = new google.maps.Map(document.getElementById("map") as HTMLElement, {
+//     center,
+//     zoom: 8
+//   });
+// }
+initMap(position);
