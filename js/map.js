@@ -68,7 +68,7 @@ var _this = this;
         n[_i - 1] = arguments[_i];
     }
     return r.add(f) && u().then(function () { return d[l].apply(d, __spreadArray([f], n, false)); });
-}; })({ key: "AIzaSyBCI9_XT99gdSDgCctcuPFJKCBLi8EPdMM", v: "beta" });
+}; })({ key: "-", v: "beta" });
 // Initialize and add the map
 var map;
 var position = { lat: 28.482921928694683, lng: -16.322237460149434 };
